@@ -1,10 +1,10 @@
 :root {
-  --color-blue-universe: #010C53;
-  --color-deep-blue: #011676;
-  --color-tech-blue: #0429BC;
-  --color-dev-blue: #1F53E5;
-  --color-new-black: #0D0D0D;
-  --color-white-snow: #F4F5F6;
+  --color-blue-universe: #1a0000;
+  --color-deep-blue: #3d0000;
+  --color-tech-blue: #8b0000;
+  --color-dev-blue: #cc0000;
+  --color-new-black: #0d0d0d;
+  --color-white-snow: #f4f5f6;
 }
 
 * {
@@ -15,9 +15,14 @@
 
 body {
   background-color: var(--color-new-black);
-  background-image: radial-gradient(circle at center, var(--color-deep-blue) 0%, var(--color-blue-universe) 60%, var(--color-new-black) 100%);
+  background-image: radial-gradient(
+    circle at center,
+    var(--color-deep-blue) 0%,
+    var(--color-blue-universe) 60%,
+    var(--color-new-black) 100%
+  );
   color: var(--color-new-black);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -151,25 +156,35 @@ body.dragging * {
 
 /* Page Lombada Crease Shadows */
 .page:nth-child(even):not(:last-child) .page-content::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 30px;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 70%, rgba(0, 0, 0, 0.16) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.08) 70%,
+    rgba(0, 0, 0, 0.16) 100%
+  );
   pointer-events: none;
   z-index: 10;
 }
 
 .page:nth-child(odd):not(:first-child) .page-content::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 30px;
   height: 100%;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.08) 70%, rgba(0, 0, 0, 0.16) 100%);
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.08) 70%,
+    rgba(0, 0, 0, 0.16) 100%
+  );
   pointer-events: none;
   z-index: 10;
 }
@@ -216,14 +231,18 @@ body.dragging * {
 }
 
 .continents-badge {
-  background-color: #1a1a1a;
+  background-color: #c70505;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  padding: 5px;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .page-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.6rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-deep-blue);
 }
@@ -269,7 +288,7 @@ body.dragging * {
 }
 
 .slot-number {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--color-tech-blue);
@@ -299,7 +318,7 @@ body.dragging * {
 
 .slot-role {
   font-size: 0.72rem;
-  color: #626C84;
+  color: #626c84;
 }
 
 /* ===================================================
@@ -378,7 +397,7 @@ body.dragging * {
 .page-footer {
   margin-top: 15px;
   font-size: 0.8rem;
-  color: #8C98B0;
+  color: #8c98b0;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -418,13 +437,18 @@ body.dragging * {
 }
 
 .cover-seal::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -50%;
   width: 200%;
   height: 100%;
-  background: linear-gradient(to right, transparent, rgba(0, 240, 255, 0.25), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 240, 255, 0.25),
+    transparent
+  );
   transform: skewX(-30deg);
   animation: sealShine 6s infinite linear;
 }
@@ -472,7 +496,9 @@ body.dragging * {
 
 .glitch::after {
   left: -2px;
-  text-shadow: -1.5px 0 #00f0ff, 0 1px #00f0ff;
+  text-shadow:
+    -1.5px 0 #00f0ff,
+    0 1px #00f0ff;
   clip: rect(85px, 450px, 140px, 0);
   animation: glitch-anim2 6s infinite linear alternate-reverse;
 }
@@ -566,7 +592,7 @@ body.dragging * {
 }
 
 .cover-title {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: 6px;
@@ -576,7 +602,7 @@ body.dragging * {
 }
 
 .cover-subtitle {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 10px;
@@ -592,7 +618,9 @@ body.dragging * {
   border: 1px solid rgba(0, 240, 255, 0.2);
   border-radius: 12px;
   background: rgba(7, 8, 14, 0.7);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), inset 0 0 25px rgba(0, 240, 255, 0.05);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.6),
+    inset 0 0 25px rgba(0, 240, 255, 0.05);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -622,7 +650,9 @@ body.dragging * {
   align-items: center;
   justify-content: space-between;
   padding: 6px 4px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), inset 0 0 8px rgba(0, 240, 255, 0.1);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    inset 0 0 8px rgba(0, 240, 255, 0.1);
   z-index: 2;
   transition: all 0.3s ease;
 }
@@ -635,7 +665,7 @@ body.dragging * {
 }
 
 .mc-avatar {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 800;
   font-size: 0.65rem;
   color: #00f0ff;
@@ -677,7 +707,6 @@ body.dragging * {
 }
 
 @keyframes floatCard1 {
-
   0%,
   100% {
     transform: rotate(-12deg) translateY(0);
@@ -689,7 +718,6 @@ body.dragging * {
 }
 
 @keyframes floatCard2 {
-
   0%,
   100% {
     transform: rotate(8deg) translateY(0);
@@ -701,7 +729,6 @@ body.dragging * {
 }
 
 @keyframes floatCard3 {
-
   0%,
   100% {
     transform: rotate(15deg) translateY(0);
@@ -728,7 +755,9 @@ body.dragging * {
   height: 66px;
   border-radius: 50%;
   background: radial-gradient(circle, #00f0ff 0%, #1f53e5 100%);
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.75), inset 0 0 10px rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 0 25px rgba(0, 240, 255, 0.75),
+    inset 0 0 10px rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -766,7 +795,6 @@ body.dragging * {
 }
 
 @keyframes spherePulse {
-
   0%,
   100% {
     transform: scale(1);
@@ -839,7 +867,7 @@ body.dragging * {
 }
 
 .info-box h4 {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   color: var(--color-deep-blue);
   font-size: 1.1rem;
 }
@@ -876,7 +904,11 @@ body.dragging * {
 /* CONTRACAPA (Back Cover) CSS */
 .page-cover-back {
   background-color: var(--color-blue-universe);
-  background-image: linear-gradient(225deg, var(--color-blue-universe) 0%, var(--color-new-black) 100%);
+  background-image: linear-gradient(
+    225deg,
+    var(--color-blue-universe) 0%,
+    var(--color-new-black) 100%
+  );
   color: var(--color-white-snow);
   border: 3px solid var(--color-dev-blue);
   box-shadow: inset 0 0 50px rgba(31, 83, 229, 0.35);
@@ -890,10 +922,10 @@ body.dragging * {
 }
 
 .cover-back-header h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 2.2rem;
   letter-spacing: 4px;
-  background: linear-gradient(to right, #FFFFFF, var(--color-dev-blue));
+  background: linear-gradient(to right, #ffffff, var(--color-dev-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -924,7 +956,7 @@ body.dragging * {
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 12px 20px;
   border-radius: 4px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -1043,7 +1075,6 @@ body.dragging * {
 }
 
 @media (max-width: 768px) {
-
   /* In portrait/mobile mode, StPageFlip will show single pages */
   .album-viewport {
     width: 100%;
