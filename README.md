@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://drive.google.com/uc?export=view&id=1HL2PVLF-6NHVNqB-KX4Vahy_uQVOfa6h" alt="" width="100%" border="0" />
+  <img src="https://drive.google.com/uc?export=view&id=1LIANYV5KFDXVq1-5dOIakSCIgZzUlAeH" alt="" width="100%" border="0" />
 <br>
 
 # The Web Architecture with AI Immersion
@@ -20,7 +20,6 @@
 
 - [Antigravity IDE](https://antigravity.google/product/antigravity-ide)
 - [Opencode IDE](https://opencode.ai/brand)
-- [Vite](https://v3.vitejs.dev/guide/)
 
 ## Demonstration
 
