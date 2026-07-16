@@ -146,12 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 // Determina canto horizontal (direita vs esquerda) em coordenadas relativas ao livro
-                const totalPages = pageFlip.getPageCount();
-                const isLastPage = activeDragPage.index === totalPages - 1;
-
-                if (isLastPage) {
-                    cornerX = 0; // Contracapa: sempre canto esquerdo para voltar
-                } else if (activeDragPage.index % 2 === 0) {
+                if (activeDragPage.index % 2 === 0) {
                     cornerX = bookRect.width; // Canto direito
                 } else {
                     cornerX = 0; // Canto esquerdo
