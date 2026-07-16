@@ -21,6 +21,10 @@
 - [Antigravity IDE](https://antigravity.google/product/antigravity-ide)
 - [Opencode IDE](https://opencode.ai/brand)
 
+## Libraries
+
+- [Fastapi](https://fastapi.tiangolo.com/)
+
 ## Demonstration
 
 <div align="center">
@@ -29,8 +33,6 @@
 <br />
 
 ## Frontend
-
-### Install
 
 Prompts <br />
 `No arquivo @index.html da pasta /frontend tem seis páginas de conteúdo, alterar e adiciona mais uma página que siga a arquitetura, para ter sete páginas, para conter os sete continentes: Ásia, África, América do Norte, América do Sul, Antártida, Europa e Oceania, com isso pode trocar os continentes pelos nomes que contem "tech-badge" para os "continents-badge" e nos "page-title" alterar para as cinco bandas de Death e Black Metal que eu irei escolher, só altera para as cinco bandas, exemplo: "Cinco bandas Asiáticas".` <br />
@@ -52,11 +54,37 @@ git clone `https://github.com/humbertoromanojr/Web-with-AI`
 
 ## API - Backend
 
+Enabling a Python virtual machine on Windows 11<br />
+`C:\...\Web-with-AI\backend\venv> Scripts\Activate.ps1`<br />
+`(venv) C:\...\Web-with-AI\backend>`<br />
+
+Install FastAPI<br />
+`pip install fastapi`<br /><br />
+
+Prompts <br />
+`instale o uvicorn na venv deste projeto` <br />
+`Você vai criar o primeiro servidor de uma API de álbum de figurinhas.
+<br />
+Crie um arquivo main.py com um servidor FastAPI que tenha apenas 1 endpoint:
+<br />
+
+1.  GET "/" → retorna o JSON {"mensagem": "Olá, mundo! 🌍"}
+    (use uma função chamada hello_world)
+
+Requisitos:<br />
+
+- Use apenas Python com FastAPI (import: from fastapi import FastAPI)<br />
+- Crie a aplicação com app = FastAPI()<br />
+- Adicione comentários em português explicando cada parte<br />
+- Não adicione nenhum outro endpoint<br />
+- Você vai olhar o python dentro da pasta venv` <br /><br />
+
 <img src="https://drive.google.com/uc?export=view&id=16QqYlur8qtl5ao_XyEb4IthGyveQmELo" alt="" width="22" border="0" /> Go to `Web-with-AI/backend` folder <br />
 
 ## Sources
 
 - https://www.youtube.com/watch?v=oSkBkYxr1sU
+- https://wallpaperaccess.com
 
 ## License
 
