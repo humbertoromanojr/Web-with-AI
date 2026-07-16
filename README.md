@@ -62,7 +62,7 @@ Install FastAPI<br />
 `pip install fastapi`<br /><br />
 
 Prompts <br />
-`instale o uvicorn na venv deste projeto` <br />
+`instale o uvicorn na venv deste projeto` <br /><br />
 `Você vai criar o primeiro servidor de uma API de álbum de figurinhas.
 <br />
 Crie um arquivo main.py com um servidor FastAPI que tenha apenas 1 endpoint:
@@ -79,7 +79,11 @@ Requisitos:<br />
 - Não adicione nenhum outro endpoint<br />
 - Você vai olhar o python dentro da pasta venv` <br /><br />
 
+`alterar as cores na pasta  /frontend/style.css o arquivo style.css as cores em :root para ser em cores preto para vermelho, um degrade de preto para vermelho`<br /><br />
+
 <img src="https://drive.google.com/uc?export=view&id=16QqYlur8qtl5ao_XyEb4IthGyveQmELo" alt="" width="22" border="0" /> Go to `Web-with-AI/backend` folder <br />
+
+<img src="https://drive.google.com/uc?export=view&id=16QqYlur8qtl5ao_XyEb4IthGyveQmELo" alt="" width="22" border="0" /> Run server `uvicorn main:app --reload` <br />
 
 ## Sources
 
