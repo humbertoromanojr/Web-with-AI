@@ -82,6 +82,8 @@ Prompts <br />
 
 - `alterar as cores na pasta  /frontend/style.css o arquivo style.css as cores em :root para ser em cores preto para vermelho, um degrade de preto para vermelho`<br />
 
+Prompt: Create the /bandas endpoint<br />
+
 - `1. Evolua o servidor da API de álbum de figurinhas para também servir
   as imagens das bandas como arquivos estáticos.<br />
 
@@ -113,7 +115,27 @@ Prompts <br />
   from fastapi import FastAPI
   from fastapi.staticfiles import StaticFiles
   import os
-  `<br /><br />
+  `<br />
+  - `Você vai criar a versão final do servidor da API de álbum de bandas. Ele precisa liberar acesso para o frontend (CORS), listar as figurinhas e entregar a imagem de cada uma por um endpoint próprio.<br />
+
+Crie um arquivo main.py com um servidor FastAPI que:<br />
+
+Configure o middleware CORS para aceitar requisições de qualquer origem<br />
+
+Defina caminhos absolutos para a pasta de imagens usando: PASTA_BASE = os.path.dirname(os.path.abspath(file)) PASTA_IMAGENS = os.path.join(PASTA_BASE, "images")<br />
+
+Crie uma lista chamada figurinhas com as 35 figurinhas, cada uma com: id, nome, categoria, imagem_url O imagem_url deve apontar para "/images/{id}/imagem" Comente as figurinhas que ainda não estão disponíveis (ex: ids 3, 4, 5...) Deixe ativas apenas as figurinhas cujas imagens existem na pasta images/<br />
+
+Crie o endpoint GET "/bands" que retorna a lista<br />
+
+Crie o endpoint GET "/bands/{id}/nome da imagem que esta na pasta images/" que:<br />
+
+Usa glob para encontrar o arquivo com prefixo "{id:02d}[!0-9]\*" na pasta images/<br />
+Retorna 404 se não encontrar<br />
+Retorna FileResponse com o arquivo encontrado<br />
+Imports necessários: from fastapi import FastAPI, HTTPException from fastapi.responses import FileResponse from fastapi.middleware.cors import CORSMiddleware import os import glob`<br />
+
+`Agora link para o arquivo da pasta frontend/index.html possa mostrar as figurinhas armazenadas na pasta backend/images/`<br /><br />
 
 <img src="https://drive.google.com/uc?export=view&id=16QqYlur8qtl5ao_XyEb4IthGyveQmELo" alt="" width="22" border="0" /> Go to `Web-with-AI/backend` folder <br />
 
@@ -161,6 +183,7 @@ Demonstrar como programar um projeto web completo (frontend + backend) com auxí
 ```
 Web-with-AI/
 ├── backend/
+│   ├── images/
 ├── frontend/
 │   ├── index.html      # Estrutura principal do álbum
 │   ├── style.css       # Estilos e responsividade
@@ -174,7 +197,7 @@ Web-with-AI/
 
 Pagina principal do album, construida com a biblioteca [page-flip](https://github.com/nickel2/nickel2.github.io). Estrutura:
 
-| Pagina         | Conteudo                                                                     |
+| Pagina         | Content                                                                      |
 | -------------- | ---------------------------------------------------------------------------- |
 | Capa           | Capa com efeito glitch, esfera 3D e mini-cards flutuantes                    |
 | Pag. 1         | Asia - 5 bandas                                                              |
@@ -239,7 +262,7 @@ Gera som sintetizado de papel via Web Audio API:
 
 Funcao assincrona que busca figurinhas do backend FastAPI:
 
-- `GET /figurinhas` retorna JSON com id, nome e imagem_url
+- `GET /bands` retorna JSON com id, nome e imagem_url
 - Percorre os slots do HTML, extrai o numero (`#01` -> 1)
 - Insere `<img>` no slot correspondente com animacao de entrada
 - Trata erros de conexao silenciosamente (album funciona sem backend)
