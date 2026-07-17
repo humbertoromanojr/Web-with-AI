@@ -12,7 +12,7 @@ const API_BASE_URL = "http://localhost:8000";
 async function preencherFigurinhas() {
     try {
         // 1. Busca as figurinhas disponíveis na API
-        const response = await fetch(`${API_BASE_URL}/figurinhas`);
+        const response = await fetch(`${API_BASE_URL}/bands`);
 
         if (!response.ok) {
             throw new Error(`Erro na API: ${response.status} ${response.statusText}`);
@@ -48,6 +48,7 @@ async function preencherFigurinhas() {
             img.onload = () => slot.classList.add("slot-preenchido");
             img.onerror = () => console.warn(`Imagem não encontrada: ${figurinha.nome}`);
 
+            slot.querySelector(".slot-name").textContent = figurinha.nome;
             slot.insertBefore(img, slot.firstChild);
         }
 
@@ -55,7 +56,7 @@ async function preencherFigurinhas() {
 
     } catch (erro) {
         console.warn("⚠️  Não foi possível conectar à API do backend:", erro.message);
-        console.info("ℹ️  Inicie o servidor: cd backend/dia-3 && uvicorn main:app --reload");
+        console.info("ℹ️  Inicie o servidor: cd backend && .\\venv\\Scripts\\uvicorn main:app --reload");
     }
 }
 
