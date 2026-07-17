@@ -9,7 +9,7 @@ app = FastAPI()
 # Define o caminho absoluto da pasta de imagens
 # Isso garante que o servidor encontre a pasta independente de onde for executado
 PASTA_BASE = os.path.dirname(os.path.abspath(__file__))
-PASTA_IMAGENS = os.path.join(PASTA_BASE, "bands")
+PASTA_IMAGENS = os.path.join(PASTA_BASE, "images")
 
 # Monta a pasta de imagens como arquivos estáticos na rota "/imgs"
 # Assim, "bands/01-Chthonic.jpg" fica acessível em "/imgs/01-Chthonic.jpg"
@@ -21,13 +21,13 @@ bands = [
         "id": 1,
         "name": "Chthonic",
         "category": "ASIA",
-        "imagem_url": "/images/01-Chthonic.jpg",
+        "imagem_url": "/images/01-chthonic.jpg",
     },
     {
         "id": 2,
         "name": "Sigh",
         "category": "ASIA",
-        "imagem_url": "/images/02-Sigh.jpg",
+        "imagem_url": "/images/02-sigh.jpg",
     },
 ]
 
