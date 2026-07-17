@@ -6,7 +6,7 @@
 
 </h1>
 
-> Status from Project: <img src="https://drive.google.com/uc?export=view&id=1Tak2fjuusuwdzNI_rwhPqLHGVLVKNTm1" alt="" width="32" border="0" /> Under Construction <img src="https://drive.google.com/uc?export=view&id=1Tak2fjuusuwdzNI_rwhPqLHGVLVKNTm1" alt="" width="32" border="0" />
+> Status from Project: <img src="https://drive.google.com/uc?export=view&id=1Tak2fjuusuwdzNI_rwhPqLHGVLVKNTm1" alt="" width="32" border="0" /> F I N I S H E D <img src="https://drive.google.com/uc?export=view&id=1Tak2fjuusuwdzNI_rwhPqLHGVLVKNTm1" alt="" width="32" border="0" />
 
 ## Shields
 
@@ -27,6 +27,10 @@
 - [Python](https://www.python.org/downloads/)
 
 ## Demonstration
+
+<h2 align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1Bg-PMWDtcxgFb1ane0pdK7Akht9Eto0V" alt="" width="100%" border="0" />
+</h2>
 
 <div align="center">
   <img src="https://drive.google.com/uc?export=view&id=" alt="" width="100%" border="0" />
@@ -116,24 +120,25 @@ Prompt: Create the /bandas endpoint<br />
   from fastapi.staticfiles import StaticFiles
   import os
   `<br />
-  - `Você vai criar a versão final do servidor da API de álbum de bandas. Ele precisa liberar acesso para o frontend (CORS), listar as figurinhas e entregar a imagem de cada uma por um endpoint próprio.<br />
 
-Crie um arquivo main.py com um servidor FastAPI que:<br />
+- `Você vai criar a versão final do servidor da API de álbum de bandas. Ele precisa liberar acesso para o frontend (CORS), listar as figurinhas e entregar a imagem de cada uma por um endpoint próprio.<br />
 
-Configure o middleware CORS para aceitar requisições de qualquer origem<br />
+  Crie um arquivo main.py com um servidor FastAPI que:<br />
 
-Defina caminhos absolutos para a pasta de imagens usando: PASTA_BASE = os.path.dirname(os.path.abspath(file)) PASTA_IMAGENS = os.path.join(PASTA_BASE, "images")<br />
+  Configure o middleware CORS para aceitar requisições de qualquer origem<br />
 
-Crie uma lista chamada figurinhas com as 35 figurinhas, cada uma com: id, nome, categoria, imagem_url O imagem_url deve apontar para "/images/{id}/imagem" Comente as figurinhas que ainda não estão disponíveis (ex: ids 3, 4, 5...) Deixe ativas apenas as figurinhas cujas imagens existem na pasta images/<br />
+  Defina caminhos absolutos para a pasta de imagens usando: PASTA_BASE = os.path.dirname(os.path.abspath(file)) PASTA_IMAGENS = os.path.join(PASTA_BASE, "images")<br />
 
-Crie o endpoint GET "/bands" que retorna a lista<br />
+  Crie uma lista chamada figurinhas com as 35 figurinhas, cada uma com: id, nome, categoria, imagem_url O imagem_url deve apontar para "/images/{id}/imagem" Comente as figurinhas que ainda não estão disponíveis (ex: ids 3, 4, 5...) Deixe ativas apenas as figurinhas cujas imagens existem na pasta images/<br />
 
-Crie o endpoint GET "/bands/{id}/nome da imagem que esta na pasta images/" que:<br />
+  Crie o endpoint GET "/bands" que retorna a lista<br />
 
-Usa glob para encontrar o arquivo com prefixo "{id:02d}[!0-9]\*" na pasta images/<br />
-Retorna 404 se não encontrar<br />
-Retorna FileResponse com o arquivo encontrado<br />
-Imports necessários: from fastapi import FastAPI, HTTPException from fastapi.responses import FileResponse from fastapi.middleware.cors import CORSMiddleware import os import glob`<br />
+  Crie o endpoint GET "/bands/{id}/nome da imagem que esta na pasta images/" que:<br />
+
+  Usa glob para encontrar o arquivo com prefixo "{id:02d}[!0-9]\*" na pasta images/<br />
+  Retorna 404 se não encontrar<br />
+  Retorna FileResponse com o arquivo encontrado<br />
+  Imports necessários: from fastapi import FastAPI, HTTPException from fastapi.responses import FileResponse from fastapi.middleware.cors import CORSMiddleware import os import glob`<br />
 
 `Agora link para o arquivo da pasta frontend/index.html possa mostrar as figurinhas armazenadas na pasta backend/images/`<br /><br />
 
