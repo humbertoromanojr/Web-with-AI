@@ -24,6 +24,7 @@
 ## Libraries
 
 - [Fastapi](https://fastapi.tiangolo.com/)
+- [Python](https://www.python.org/downloads/)
 
 ## Demonstration
 
@@ -62,24 +63,57 @@ Install FastAPI<br />
 `pip install fastapi`<br /><br />
 
 Prompts <br />
-`instale o uvicorn na venv deste projeto` <br /><br />
-`Você vai criar o primeiro servidor de uma API de álbum de figurinhas.
-<br />
-Crie um arquivo main.py com um servidor FastAPI que tenha apenas 1 endpoint:
-<br />
 
-1.  GET "/" → retorna o JSON {"mensagem": "Olá, mundo! 🌍"}
-    (use uma função chamada hello_world)
+- `instale o uvicorn na venv deste projeto` <br /><br />
+- `Você vai criar o primeiro servidor de uma API de álbum de figurinhas.
+  <br />
+  Crie um arquivo main.py com um servidor FastAPI que tenha apenas 1 endpoint:
+  <br />
+  1.  GET "/" → retorna o JSON {"mensagem": "Olá, mundo! 🌍"}
+      (use uma função chamada hello_world)
 
-Requisitos:<br />
+  Requisitos:<br />
 
-- Use apenas Python com FastAPI (import: from fastapi import FastAPI)<br />
-- Crie a aplicação com app = FastAPI()<br />
-- Adicione comentários em português explicando cada parte<br />
-- Não adicione nenhum outro endpoint<br />
-- Você vai olhar o python dentro da pasta venv` <br /><br />
+  01 - Use apenas Python com FastAPI (import: from fastapi import FastAPI)<br />
+  02 - Crie a aplicação com app = FastAPI()<br />
+  03 - Adicione comentários em português explicando cada parte<br />
+  04 - Não adicione nenhum outro endpoint<br />
+  05 - Você vai olhar o python dentro da pasta venv` <br /><br />
 
-`alterar as cores na pasta  /frontend/style.css o arquivo style.css as cores em :root para ser em cores preto para vermelho, um degrade de preto para vermelho`<br /><br />
+- `alterar as cores na pasta  /frontend/style.css o arquivo style.css as cores em :root para ser em cores preto para vermelho, um degrade de preto para vermelho`<br />
+
+- `1. Evolua o servidor da API de álbum de figurinhas para também servir
+  as imagens das bandas como arquivos estáticos.<br />
+
+  Atualize o arquivo main.py com um servidor FastAPI que:<br />
+  1.  Use a aplicação com app = FastAPI()<br />
+
+  2.  Defina o caminho absoluto da pasta de imagens (para o servidor encontrar
+      a pasta independente de onde for executado):<br />
+      PASTA_BASE = os.path.dirname(os.path.abspath(**file**))
+      PASTA_IMAGENS = os.path.join(PASTA_BASE, "bands")
+
+  3.  Configure os arquivos estáticos: "monte" a pasta PASTA_IMAGENS na rota "/images"
+      usando StaticFiles, com name="images".<br />
+      Assim, "bands/01-Chthonic.jpg" fica acessível em "/images/01-Chthonic.jpg".<br />
+
+  4.  Tenha uma lista chamada "figurinhas" com 2 itens, cada um com os campos
+      id, nome, categoria e imagem_url:<br />
+      - {id: 1, name: "Chthonic", category: "ASIA", imagem_url: "/images/01-Chthonic.jpg"}<br />
+      - {id: 2, name: "Sigh", category: "ASIA", imagem_url: "/images/02-Sigh.jpg"}<br />
+
+  5.  Tenha apenas um endpoint: GET "/bands" (função list_bands)
+      que retorna a lista de bandas.<br />
+
+  Requisitos:<br />
+
+  01 - Use Python com FastAPI<br />
+  02 - Adicione comentários em português explicando cada parte<br />
+  03 - Imports necessários:<br />
+  from fastapi import FastAPI
+  from fastapi.staticfiles import StaticFiles
+  import os
+  `<br /><br />
 
 <img src="https://drive.google.com/uc?export=view&id=16QqYlur8qtl5ao_XyEb4IthGyveQmELo" alt="" width="22" border="0" /> Go to `Web-with-AI/backend` folder <br />
 
